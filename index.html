@@ -1,1 +1,77 @@
-Hello world
+<html>
+<head>
+<script src="https://ajax.googleapis.com/ajax/libs/jquery/2.1.1/jquery.min.js"></script>
+<script>
+    var example = ['Virtual Reality', 'Machine Learning', 'Artificial Intelligence', 'Automation', 'Tech Investors'];
+
+    textSequence(0);
+    function textSequence(i) {
+
+        if (example.length > i) {
+            setTimeout(function() {
+                document.getElementById("sequence").innerHTML = example[i];
+                textSequence(++i);
+            }, 1000); // 1 second (in milliseconds)
+
+        } else if (example.length == i) { // Loop
+            textSequence(0);
+        }
+
+    }
+</script>
+<style>
+.container {
+  height: 100%;
+  position: relative;
+  border: 0px solid green;
+}
+
+.vertical-center {
+  margin: 0;
+  position: absolute;
+  top: 50%;
+  -ms-transform: translateY(-50%);
+  transform: translateY(-50%);
+}
+
+body {
+    font-family: -apple-system, BlinkMacSystemFont, sans-serif;
+    font-size: 24px;
+}
+</style>
+  <meta charset="UTF-8">
+  <meta name="description" content="Virtual Reality, Machine Learning, Artificial Intelligence, Automation, Tech Investors.">
+  <meta name="keywords" content="VR,ML,AI,Automation">
+  <meta name="author" content="DigitalVision">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+</head>
+<body>
+<title>DigitalVision</title>
+<div class="container">
+  <div class="vertical-center">
+	  <center>
+	  	<img src="logo_B_W.jpg" width="40%" alt="DigitalVision Logo">
+	  	<br><br>
+	  	<div id="sequence">We Are</div>
+
+      <p>Get in touch:</p>
+
+<form name="contact" method="POST" data-netlify="true">
+  <p>
+    <label>Your Name: <input type="text" name="name" /></label>   
+  </p>
+  <p>
+    <label>Your Email: <input type="email" name="email" /></label>
+  </p>
+  <p>
+    <label>Message: <textarea name="message"></textarea></label>
+  </p>
+  <p>
+    <button type="submit">Send</button>
+  </p>
+</form>
+	  </center>
+  </div>
+</div>	
+</body>
+</html>
